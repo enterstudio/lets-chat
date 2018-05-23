@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node app.js",
     "stop": "pkill --signal SIGINT letschat",
-    "test": "eslint ."
+    "test": "eslint .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engine": {
     "node": "0.10.x",
@@ -91,12 +93,14 @@
     "passport.socketio": "3.6.2",
     "require-directory": "~2.1.1",
     "require-tree": "^1.1.1",
-    "uuid": "^3.0.0"
+    "uuid": "^3.0.0",
+    "snyk": "^1.80.1"
   },
   "devDependencies": {
     "eslint": "^3.1.1",
     "grunt": "~0.4.5",
     "grunt-bower": "^0.21.2",
     "grunt-bower-task": "~0.4.0"
-  }
+  },
+  "snyk": true
 }
